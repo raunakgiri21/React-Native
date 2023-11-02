@@ -27,7 +27,6 @@ export default function StartGameScreen({ onPickNumber }) {
       return;
     }
     onPickNumber(chosenNumber);
-    console.log("Valid Number");
   };
 
   return (
