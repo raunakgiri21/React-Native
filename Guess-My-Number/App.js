@@ -62,22 +62,24 @@ export default function App() {
   }
 
   return (
-    <LinearGradient
-      colors={[Colors.primary700, Colors.accent500]}
-      style={styles.rootScreen}
-    >
-      <ImageBackground
-        source={require("./assets/adaptive-icon.png")}
-        resizeMode="cover"
+    <>
+      <StatusBar style="light" />
+      <LinearGradient
+        colors={[Colors.primary700, Colors.accent500]}
         style={styles.rootScreen}
-        imageStyle={styles.backgroundImage}
       >
-        <SafeAreaProvider>
-          <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-        </SafeAreaProvider>
-      </ImageBackground>
-      <StatusBar style="auto" />
-    </LinearGradient>
+        <ImageBackground
+          source={require("./assets/adaptive-icon.png")}
+          resizeMode="cover"
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImage}
+        >
+          <SafeAreaProvider>
+            <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+          </SafeAreaProvider>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 }
 
